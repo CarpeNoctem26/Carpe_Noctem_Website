@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Carpe Noctem Issue 3",
+    "date": "2026-01-20T12:00:00.000Z",
+    "cover": "/uploads/cover-3.jpg",
+    "pdf": "/uploads/sample-issue-3.pdf"
+  },
+  {
+    "title": "Carpe Noctem Issue 2",
+    "date": "2025-11-15T12:00:00.000Z",
+    "cover": "/uploads/cover-2.jpg",
+    "pdf": "/uploads/sample-issue-2.pdf"
+  },
+  {
+    "title": "Carpe Noctem Issue 1",
+    "date": "2025-10-01T12:00:00.000Z",
+    "cover": "/uploads/cover-1.jpg",
+    "pdf": "/uploads/sample-issue-1.pdf"
+  }
+]

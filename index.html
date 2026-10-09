@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carpe Noctem Magazine - Published Issues</title>
+  <meta name="description" content="Explore published issues of Carpe Noctem Magazine arranged chronologically." />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet" />
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <!-- Header Section -->
+    <header class="site-header">
+      <div class="header-container">
+        <img src="website_logo.png" alt="Carpe Noctem Logo" class="site-logo" id="site-logo" />
+        <div class="header-text">
+          <h1>Welcome to our magazine!</h1>
+          <h2>Make Your Life A Story Worth Telling...</h2>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Section: Issues Grid -->
+    <main class="main-content">
+      <h2 class="section-subheading">Take a look at our issues:</h2>
+      <div id="issues-grid" class="issues-grid">
+        <!-- Dynamically populated by script.js -->
+      </div>
+    </main>
+
+    <!-- Footer / About Section -->
+    <footer class="site-footer">
+      <section class="about-section">
+        <h2>About Us</h2>
+        <p>We are a student-led magazine aiming to give students a platform to showcase creative work.
+          Creativity is about more than just articles, and we are open to everything from short stories to poems to
+          artworks. We want students to showcase their unique experiences and perspectives through their work and their
+          creativity. By giving students a platform to share their work, we aim to be able to help others view unique
+          takes on each issue's theme. Carpe Noctem means "Seize the Night", and we believe that everyone has a story to
+          tell, and we want to help
+          you share yours.
+        </p>
+
+
+
+      </section>
+    </footer>
+  </div>
+
+  <!-- Dynamic Logic Script -->
+  <script src="script.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
