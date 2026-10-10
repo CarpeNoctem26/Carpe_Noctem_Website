@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
-  --bg-color: #412b23;
+  --bg-color: #412B23;
   --text-color: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.7);
   --border-color: rgba(255, 255, 255, 0.15);
   --card-bg: rgba(255, 255, 255, 0.04);
+  /* Keep if you want subtle card distinction, or set to transparent for pure background */
   --card-hover-bg: rgba(255, 255, 255, 0.08);
   --accent-gold: #e5c158;
   --shadow-color: rgba(0, 0, 0, 0.4);
   --font-family: 'Playfair Display', Georgia, serif;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -58,7 +61,7 @@ body {
   max-height: 80px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+  /* Remove filter: drop-shadow(...) if it creates a dark boundary around the logo */
   transition: transform 0.3s ease;
 }
 
@@ -117,16 +120,17 @@ body {
   padding: 24px;
   text-decoration: none;
   color: var(--text-color);
-  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
-              box-shadow 0.3s ease, 
-              border-color 0.3s ease, 
-              background-color 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
   position: relative;
   overflow: hidden;
   cursor: pointer;
 }
 
-.issue-card:hover, .issue-card:focus-visible {
+.issue-card:hover,
+.issue-card:focus-visible {
   transform: translateY(-6px);
   background-color: var(--card-hover-bg);
   border-color: rgba(255, 255, 255, 0.4);
@@ -199,7 +203,8 @@ body {
   margin-top: auto;
 }
 
-.about-section h2, .about-section h3 {
+.about-section h2,
+.about-section h3 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 12px;
